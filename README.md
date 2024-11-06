@@ -1,0 +1,1 @@
+# Cluster for testing OpenTelemetry
