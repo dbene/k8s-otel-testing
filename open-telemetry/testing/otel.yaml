@@ -1,11 +1,11 @@
 #
-# kubectl port-forward services/otel-demo 3000:3000 4317:4317 4318:4318 -n opentelemetry
+# kubectl port-forward services/otel-demo 3000:3000 4317:4317 4318:4318 -n testing
 #
 apiVersion: v1
 kind: Pod
 metadata:
   name: otel-pod
-  namespace: opentelemetry
+  namespace: testing
   labels:
     app.kubernetes.io/name: otel
 spec:
@@ -24,7 +24,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: otel-demo
-  namespace: opentelemetry
+  namespace: testing
 spec:
   selector:
     app.kubernetes.io/name: otel
